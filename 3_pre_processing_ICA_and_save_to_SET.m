@@ -5,7 +5,7 @@ Files_dir =dir(fullfile(myFolder,'*.set'));
 %location t0 save set file
 save_location = 'D:\NCAI-Neurocomputation Lab\Custom tDCS Experiments\MindFoster_tDCS_Paper\Data\Hira tDCS EEG Data\3_31_channels_Data_after_ICA_Applied\test';
 
-matdata = {}
+EEG_Data = {}
 for k = 1:(length(Files_dir))
     name = strcat(myFolder, Files_dir(k).name);
     EEG = pop_loadset(name);

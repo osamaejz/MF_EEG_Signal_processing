@@ -13,7 +13,7 @@ for k = 1:(length(Files_dir)-2)
     data = data(:,2:23);
     EEG.data = data';
     EEG.nbchan = 22;
-
+    EEG.srate = 500;
     EEG = pop_chanedit(EEG , 'lookup' , 'E:\\eeglab_current\\eeglab2020_0\\plugins\\dipfit\\standard_BESA\\standard-10-5-cap385.elp' , 'load',{'E:\eeglab_current\eeglab2020_0\NF_Cap22.ced' , 'filetype' , 'autodetect'});
     new_name = Files_dir(k+2).name;    
     new_name = new_name(1: length(new_name)-4);
